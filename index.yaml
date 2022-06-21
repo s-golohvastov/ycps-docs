@@ -1,0 +1,22 @@
+title: Модуль ycps
+description: Описание функциональности модуля
+meta:
+  title: Метаданные
+  noIndex: true
+links:
+- title: Обзор и установка модуля
+  description: Обзор и установка модуля
+  href: ./overview.html
+- title: Compute
+  description: Команды работы с виртуальными машинами
+  href: ./compute/compute.html
+- title: Folders
+  description: Команды работы с каталогами
+  href: ./folders/folders.html
+- title: Clouds
+  description: Команды работы с облаками
+  href: ./clouds/clouds.html
+- title: VPC
+  description: Команды работы с сетями и подсетями
+  href: ./vpc/vpc.html
+

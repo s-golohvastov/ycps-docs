@@ -1,0 +1,14 @@
+title: Использование модуля ycps
+href: index.yaml
+items:
+- name: Обзор и установка модуля
+  href: ./overview.md
+- name: Compute
+  href: ./compute/compute.md
+- name: Folders
+  href: ./folders/folders.md
+- name: Clouds
+  href: ./clouds/clouds.md
+- name: VPC
+  href: ./vpc/vpc.md
+
