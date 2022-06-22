@@ -5,7 +5,7 @@
 Модуль устанавливается из PowerShel gallery обычным способом. На данный момент молуль находится в стадии `preview`, поскольку все еще в разработке, поэтому устанавливаем `prerelease` версию.
 
 ```powershell
-Install-Module ycps -AllowPrerelease
+Install-Module -Name ycps -AllowPrerelease
 ```
 
 Посмотреть команды, предоставляемые модулем можно командой
