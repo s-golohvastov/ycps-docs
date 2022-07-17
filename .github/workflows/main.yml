@@ -34,3 +34,11 @@ jobs:
         shell: pwsh
         run: |
           ./.scripts/buildDoc.ps1
+
+      - name: publish docs
+        shell: bash
+        run: |
+          yfm --publish --storageEndpoint {{ secrets.STORAGE_ENDPOINT }} \
+          --storageBucket {{ secrets.STORAGE_BUCKET }} \
+          --storageKeyId {{ secrets.KEY_ID }} \
+          --storageSecretKey {{ secrets.KEY }}
