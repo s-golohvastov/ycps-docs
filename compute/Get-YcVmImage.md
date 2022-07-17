@@ -1,0 +1,1 @@
+{% include notitle [Описание](../_ExternalHelp/Get-YcVmImage.md) %}

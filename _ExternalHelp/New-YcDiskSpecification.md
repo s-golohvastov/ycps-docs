@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-YcDiskSpecification
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Возвращает объект конфигурации диска виртуальной машины
 
 ## SYNTAX
 
@@ -18,21 +18,21 @@ New-YcDiskSpecification -Name <String> [-Description <String>] [-TypeId <String>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Возвращает объект конфигурации диска виртуальной машины
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> New-YcDiskSpecification -Name "boot01" -Size (32GB) -TypeId "network-hdd" -BlockSize 8192 -ImageId (Get-YcVmImage -Family "ubuntu-2004-lts").id
 ```
 
-{{ Add example description here }}
+Создает конфигурацию диска для виртуальной машины, размером 32GB, типа network-hdd. Зоздается загрузочный диск, поэтому указываем идентификатор образа, используемого для создания виртуальной машины
 
 ## PARAMETERS
 
 ### -Autodelete
-{{ Fill Autodelete Description }}
+Удалять или не удалять диск при удалении ВМ
 
 ```yaml
 Type: Boolean
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Blocksize
-{{ Fill Blocksize Description }}
+Размер блока диска в байтах
 
 ```yaml
 Type: Int32
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+Описание
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImageId
-{{ Fill ImageId Description }}
+Идентификатор образа диска, который будет являться базовым для этого диска
 
 ```yaml
 Type: String
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Имя диска
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Size
-{{ Fill Size Description }}
+Размер в байтах
 
 ```yaml
 Type: Int64
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -TypeId
-{{ Fill TypeId Description }}
+Тип диска
 
 ```yaml
 Type: String

@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-YcVM
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Создание новой виртуальной машины в облаке
 
 ## SYNTAX
 
@@ -19,21 +19,28 @@ New-YcVM -Name <String> -FolderId <String> -ZoneId <String> -PlatformId <String>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Создание новой виртуальный машины в облаке. Команда выполняется синхронно, то есть ожидает окончания создания машины и возвращает объект машины
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+$testFolderId = "SOME_FOLDER_ID"
+$platformId = "standard-v1"
+$zoneId = "ru-central1-a"
+$subnetId = "SOME_SUBNET_ID"
+
+$vmSpec = New-YcVmSpecification -Memory 4GB -Cores 4 -CoreFraction 5
+$bootDisk = New-YcDiskSpecification -Name "boot01" -Size (32GB) -TypeId "network-hdd" -BlockSize 8192 -ImageId (Get-YcVmImage -Family "ubuntu-2004-lts").id
+$vm = New-YcVm -Name "test-vm-from-pester" -FolderId $testFolderId -ZoneId $zoneId -Platform $platformId -SubnetId $subnetId -ResourceSpec $vmSpec -BootDiskSpec $bootDisk
 ```
 
-{{ Add example description here }}
+Скрипт создает виртуальную машину и возвращает ее объект после того, как она создана
 
 ## PARAMETERS
 
 ### -BootDiskSpec
-{{ Fill BootDiskSpec Description }}
+Объект диска, который будет использоваться для старта ВМ. Должен быть создан из образа
 
 ```yaml
 Type: AttachedDiskSpec
@@ -48,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataDiskSpec
-{{ Fill DataDiskSpec Description }}
+Объект диска, который будет подключен как диск для данных
 
 ```yaml
 Type: AttachedDiskSpec
@@ -63,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderId
-{{ Fill FolderId Description }}
+Папка, в которой следует создать ВМ
 
 ```yaml
 Type: String
@@ -78,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metadata
-{{ Fill Metadata Description }}
+Объект метаданных. Один из сценариев использования - задание пароля или ssh ключа для входа в систему
 
 ```yaml
 Type: Hashtable
@@ -93,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Имя виртуальной машины
 
 ```yaml
 Type: String
@@ -108,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -PlatformId
-{{ Fill PlatformId Description }}
+Тип аппратной платформы виртуальной машины
 
 ```yaml
 Type: String
@@ -123,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceSpec
-{{ Fill ResourceSpec Description }}
+Объект конфигурации, задающий размер ВМ
 
 ```yaml
 Type: ResourcesSpec
@@ -138,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
-{{ Fill SubnetId Description }}
+Идентификатор подсети виртуальной машины
 
 ```yaml
 Type: String
@@ -153,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -ZoneId
-{{ Fill ZoneId Description }}
+Зона доступности ВМ
 
 ```yaml
 Type: String

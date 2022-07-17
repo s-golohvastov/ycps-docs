@@ -15,6 +15,14 @@ items:
       href: ./compute/compute.md
     - name: Get-YcVm
       href: ./compute/Get-YcVM.md
+    - name: Get-YcVmImage
+      href: ./compute/Get-YcVmImage.md
+    - name: New-YcVm
+      href: ./compute/New-YcVm.md
+    - name: New-YcVmSpecification
+      href: ./compute/New-YcVmSpecification.md
+    - name: New-YсDiskSpecification
+      href: ./compute/New-YсDiskSpecification.md
 - name: Folders
   href: ./folders/folders.md
 - name: Clouds

@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-YcVmSpecification
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Создание объекта, описывающего конфигурацию виртуальной машины
 
 ## SYNTAX
 
@@ -18,21 +18,21 @@ New-YcVmSpecification -Memory <Int64> -Cores <Int32> [-CoreFraction <Int32>] [-G
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Создание объекта, описывающего конфигурацию виртуальной машины. Объект задает объем памяти? количество ядер, уровень потребления (CoreFraction), количество GPUs
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> New-YcVmSpecification -Memory 4GB -Cores 4 -CoreFraction 5
 ```
 
-{{ Add example description here }}
+Возвращает объект, содержащий конфигурацию виртуальной машины с 4GB RAM, 4 ядрами и 5% уровнем потребления
 
 ## PARAMETERS
 
 ### -CoreFraction
-{{ Fill CoreFraction Description }}
+Задает максимальный процент потребления ресурсов виртуальной машины
 
 ```yaml
 Type: Int32
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cores
-{{ Fill Cores Description }}
+Задает количество ядер для виртуальной машины
 
 ```yaml
 Type: Int32
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Gpus
-{{ Fill Gpus Description }}
+Задает количество GPU ядер для виртуальной машины
 
 ```yaml
 Type: Int32
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Memory
-{{ Fill Memory Description }}
+Задает количество оперативной памяти виртуальной машины
 
 ```yaml
 Type: Int64

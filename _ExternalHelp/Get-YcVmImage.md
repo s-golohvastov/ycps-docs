@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-YcVmImage
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Получает информацию об опубликованных образах виртуальных машин
 
 ## SYNTAX
 
@@ -23,21 +23,21 @@ Get-YcVmImage [-FolderId <String>] -Family <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Получает информацию об опубликованных образах виртуальных машин. Можно получить список всех образов, образов из определенной папки или самый новый образ из семейства образов
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-YcVmImage -Family "ubuntu-2004-lts"
 ```
 
-{{ Add example description here }}
+Получить самы новый образ из семейства образов ubuntu-2004-lts
 
 ## PARAMETERS
 
 ### -Family
-{{ Fill Family Description }}
+Идентификатор семейства образов
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderId
-{{ Fill FolderId Description }}
+Идентификатор папки, в которой содержатся образы
 
 ```yaml
 Type: String
