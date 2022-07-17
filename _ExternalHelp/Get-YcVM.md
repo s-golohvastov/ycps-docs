@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-YcVM
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Получение данных о виртуальной машине в облаке
 
 ## SYNTAX
 
@@ -38,21 +38,43 @@ Get-YcVM [-InstanceId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Команда предназначена для получения детальной информации о виртуальной машине в облаке.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-YcVM -FolderId "folder_id"
 ```
 
-{{ Add example description here }}
+Получить список всех виртуальных машин в указанном каталоге
+
+### Example 2
+```powershell
+Get-YcVM -InstanceId "instance_id"
+```
+
+Получить виртуальную машину по ее идентификатору
+
+### Example 3
+```powershell
+Get-YcVM -FolderId "folder_id" -InstanceName "test-vm"
+```
+
+Получить виртуальную машину из указанного каталога по имени
+
+### Example 4
+```powershell
+$cloudId = "cloud_id"
+$vm = Get-YcCloud -CloudId $cloudId | Get-YcFolder | Get-YcVM
+```
+
+Получить виртуальные машины из облака с идентификатором "cloud_id", по всем каталогам этого облака
 
 ## PARAMETERS
 
 ### -Folder
-{{ Fill Folder Description }}
+Объект каталога, возвращаемый командой Get-YcFolder
 
 ```yaml
 Type: Folder
@@ -67,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderId
-{{ Fill FolderId Description }}
+Идентификатор каталога
 
 ```yaml
 Type: String
@@ -82,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceId
-{{ Fill InstanceId Description }}
+Идентификатор виртуальной машины
 
 ```yaml
 Type: String
@@ -97,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceName
-{{ Fill InstanceName Description }}
+Имя виртуальной машины
 
 ```yaml
 Type: String

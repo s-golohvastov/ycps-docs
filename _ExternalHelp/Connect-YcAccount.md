@@ -8,30 +8,30 @@ schema: 2.0.0
 # Connect-YcAccount
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Команда для аутентификации в облаке
 
 ## SYNTAX
 
-```
+```powershell
 Connect-YcAccount -OAuthToken <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Команда для аутентификации в облаке. Получает на вход OAuth токен и "обменивает" его на IAM токен, который, в свою очередь, используется далее для авторизации на ресурсах. Ни OAuth ни IAM не сохраняются на файловой системе. Они сужествуют только в рамказ PowerShell сессии в которой вызвался командлет
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+Connect-YcAccount -OAuthToken "jfgfkjgbdkjgbdkfgbkdfbdkfbkjfdb"
 ```
 
-{{ Add example description here }}
+Команда аутентифицирует текущую PowerShell сессию в облаке
 
 ## PARAMETERS
 
 ### -OAuthToken
-{{ Fill OAuthToken Description }}
+OAuth токен Яндекс Облака
 
 ```yaml
 Type: String

@@ -1,10 +1,20 @@
 title: Использование модуля ycps
 href: index.yaml
 items:
-- name: Обзор и установка модуля
+- name: Установка и обзор модуля
   href: ./overview.md
+- name: Auth
+  items:
+    - name: Обзор
+      href: ./auth/overview.md
+    - name: Connect-YcAccount
+      href: ./auth/Connect-YcAccount.md
 - name: Compute
-  href: ./compute/compute.md
+  items:
+    - name: Обзор
+      href: ./compute/compute.md
+    - name: Get-YcVm
+      href: ./compute/Get-YcVM.md
 - name: Folders
   href: ./folders/folders.md
 - name: Clouds

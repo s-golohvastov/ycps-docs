@@ -39,4 +39,30 @@ Cmdlet          Start-YcVm                                         0.0.1      yc
 Cmdlet          Stop-YcVm                                          0.0.1      ycps
 ```
 
+После установки необходимо авторизоваться облаке, командой `Connect-YcAccount`:
+
+```powershell
+Connect-YcAccount -OAuthToken "jfgfkjgbdkjgbdkfgbkdfbdkfbkjfdb"
+```
+
+После этого можно выполнять другие команды, например подучить список облаков, связанных с вашей учетной записью:
+
+```powershell
+Get-YcCloud
+```
+
+или список всех каталогов облака:
+
+```powershell
+$testCloudId = "cloud_id_одного_из_облаков"
+Get-YcFolder -CloudId $testCloudId | Get-YcFolder
+```
+
+ну и наконец, список всех виртуальных машил в этом каталоге:
+
+```powershell
+$testCloudId = "cloud_id_одного_из_облаков"
+Get-YcCloud -CloudId $testCloudId | Get-YcFolder | Get-YcVM
+```
+
 Исходный код модуля [тут](https://github.com/s-golohvastov/ycps)
