@@ -29,3 +29,8 @@ jobs:
         shell: bash
         run: |
           npm i @doc-tools/docs -g
+
+      - name: build docs
+        shell: pwsh
+        run: |
+          ./.scripts/buildDoc.ps1
