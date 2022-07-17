@@ -37,11 +37,13 @@ jobs:
 
       - name: publish docs
         shell: bash
+        env:
+          YFM_STORAGE_KEY_ID: ${{ secrets.KEY_ID }}
+          YFM_STORAGE_SECRET_KEY: ${{ secrets.KEY }}
         run: |
+          cd ..
           yfm -i ./ycps-docs -o ./ycps-docs-html \
           --publish \
-          --storageEndpoint {{ secrets.STORAGE_ENDPOINT }} \
-          --storageBucket {{ secrets.STORAGE_BUCKET }} \
-          --storageKeyId {{ secrets.KEY_ID }} \
-          --storageSecretKey {{ secrets.KEY }}
+          --storageEndpoint ${{ secrets.STORAGE_ENDPOINT }} \
+          --storageBucket ${{ secrets.STORAGE_BUCKET }} \
           
